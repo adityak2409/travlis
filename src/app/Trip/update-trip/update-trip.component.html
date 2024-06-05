@@ -1,0 +1,52 @@
+<div class="row marginlittle">
+    <div class="col-md-12 topform">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Trip</h4>
+                <p class="card-category">Add New Trip Here</p>
+            </div>
+            <div class="card-body">
+                <form #blogForm="ngForm">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="Source">Source:</label>
+                      <input type="text"[(ngModel)]="trip.Source" class="form-control" name="Source" placeholder="Enter Source" required>
+                      
+                  </div>
+                  <div class="col-md-12">
+                   
+                    <label for="Date">Date:</label>
+                    <input type="text"[(ngModel)]="trip.Date" class="form-control" name="Date" placeholder="Enter Date" required>
+                    
+                  </div>
+
+                  <div class="col-md-12">
+                   
+                    <label for="Status">Status:</label>
+                    <input type="text"[(ngModel)]="trip.Status" class="form-control" name="Status" placeholder="Enter Status" required>
+                    
+                  </div>
+                  
+                  <div class="col-md-12">
+                   
+                    <label for="Budget">Budget:</label>
+                    <input type="text"[(ngModel)]="trip.Budget" class="form-control" name="Budget" placeholder="Enter Budget" required>
+                    
+                  </div>
+                  
+            
+               
+                
+                  </div>
+                  
+                  
+                
+                    <button mat-raised-button type="submit" [disabled]="blogForm.invalid"class="btn btn-danger pull-right"(click)="OnSubmit()">update</button>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+

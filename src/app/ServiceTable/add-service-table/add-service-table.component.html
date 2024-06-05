@@ -1,0 +1,41 @@
+<div class="container">
+    <h2 class="text-center">ServiceTable Form</h2>
+    <form>
+        <div class="row">
+            
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Title">Title:</label>
+                    <input type="text"[(ngModel)]="serviceTable.Title" class="form-control" name="Title" placeholder="Enter Title" required>
+                </div>
+            </div>
+          
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Subtitle">Subtitle:</label>
+                    <input type="text" [(ngModel)]="serviceTable.SubTitle" class="form-control" name="Subtitle" placeholder="Enter Subtitle" required>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+       
+            <label for="avatar">Upload Image: </label>
+            <input type="file" id="avatar"  name="Photo"  [(ngModel)]="serviceTable.Photo"  (change)="fileChangeEvent($event)" #PhotoControl="ngModel"accept="image/png, image/jpeg" required>
+           
+           </div>
+
+        
+        <div class="form-group">
+          <label for="Status">Status:</label>
+          <input type="text"[(ngModel)]="serviceTable.Status" class="form-control" name="Status" placeholder="Enter Status" required>
+      </div>
+     
+     
+       
+        
+
+        
+
+        <button  type="submit" (click)="OnSubmit()"class="btn btn-primary">Submit</button>
+    </form>
+</div>

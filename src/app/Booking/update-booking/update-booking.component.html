@@ -1,0 +1,51 @@
+<div class="row marginlittle">
+    <div class="col-md-12 topform">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Booking</h4>
+                <p class="card-category">Add New Booking Here</p>
+            </div>
+            <div class="card-body">
+                <form #blogForm="ngForm">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="UserId">UserId:</label>
+                      <input type="text"[(ngModel)]="booking.UserId" class="form-control" name="UserId" placeholder="Enter UserId" required>
+                      
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="VendorServiceId">VendorServiceId:</label>
+                      <input type="text"[(ngModel)]="booking.VendorServiceId" class="form-control" name="VendorServiceId" placeholder="Enter VendorServiceId" required>
+                      
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="BookingDate">BookingDate:</label>
+                      <input type="text"[(ngModel)]="booking.BookingDate" class="form-control" name="BookingDate" placeholder="Enter BookingDate" required>
+                      
+                  </div>
+                  <div class="col-md-12">
+                   
+                    <label for="Status">Status:</label>
+                    <input type="text"[(ngModel)]="booking.Status" class="form-control" name="Status" placeholder="Enter Status" required>
+                    
+                  </div>
+                  
+            
+               
+                
+                  </div>
+                  
+                  
+                
+                    <button mat-raised-button type="submit" [disabled]="blogForm.invalid"class="btn btn-danger pull-right"(click)="OnSubmit()">update</button>
+                    <div class="clearfix"></div>
+              
+            </div>
+        </div>
+
+
+  

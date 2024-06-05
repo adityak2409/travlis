@@ -1,0 +1,61 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">UserSocialMedia List</h4>
+                        <p class="card-category"> View Here All UserSocialMedia Table Record</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary" style="background-color: #ea48441c;">
+                                    <th>RegistrationId </th>
+                                    <th>FName </th>
+                                    <th>LName </th>
+                                    <th>Email </th>
+                                    <th>Password </th>
+                                    <th>EmailStatus </th>
+                                    <th>OtpNo </th>
+                                    <th>Status </th>
+                                    
+                                    
+                                    
+                                        
+                                   
+                              
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let i of RegistrationList">
+                                        <td>{{i.RegistrationId}}</td>
+                                        <td>{{i.FName}}</td>
+                                        <td>{{i.LName}}</td>
+                                        <td>{{i.Email}}</td>
+                                        <td>{{i.Password}}</td>
+                                        <td>{{i.EmailStatus}}</td>
+                                        <td>{{i.OtpNo}}</td>
+                                        <td>{{i.Status}}</td>
+                                        
+                                        
+                                        
+                                        <!-- <td>{{i.Sectiontwo}}</td> -->
+                                        <!-- <td> <img src="{{i.Photo}}" style="height: 80px;width: 80px;"></td>  -->
+                                      <td><i class="fa fa-pencil-square iconaction"(click)="Edit(i.Id)"  aria-hidden="true"></i>
+                                             <i class="fa fa-eye iconaction" (click)="View(i.Id)" aria-hidden="true"></i>
+                                              <i class="fa fa-trash iconaction"(click)="Delete(i.Id)" aria-hidden="true"></i>
+                                        </td> 
+                                    </tr>    
+                                                           
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   
+        </div>
+    </div>
+  </div>
+
+

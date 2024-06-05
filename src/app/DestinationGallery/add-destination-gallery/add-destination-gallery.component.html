@@ -1,0 +1,39 @@
+<div class="container">
+    <h2 class="text-center">DestinationGallery Form </h2>
+    <form>
+        <div class="row">
+            
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Title">Title:</label>
+                    <input type="text"[(ngModel)]="destinationGallery.Title" class="form-control" name="Title" placeholder="Enter Title" required>
+                </div>
+            </div>
+          
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Subtitle">Subtitle:</label>
+                    <input type="text" [(ngModel)]="destinationGallery.SubTitle" class="form-control" name="Subtitle" placeholder="Enter Subtitle" required>
+                </div>
+            </div>
+        </div>
+
+        
+      <div class="col-md-6">
+       
+      <label for="avatar">Upload Image: </label>
+      <input type="file" id="avatar"  name="Photo"  [(ngModel)]="destinationGallery.Photo"  (change)="fileChangeEvent($event)" #PhotoControl="ngModel"accept="image/png, image/jpeg" required>
+     
+     </div>
+     
+       
+        
+
+        
+
+        <button  type="submit" (click)="OnSubmit()"class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+

@@ -1,0 +1,70 @@
+<div class="container">
+    <h2 class="text-center">Trip Form</h2>
+    <form>
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="UserId">UserId:</label>
+                    <input type="text"[(ngModel)]="trip.UserId" class="form-control" name="UserId" placeholder="Enter UserId" required>
+                </div>
+
+            <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="VendorId">VendorId:</label>
+                        <input type="text"[(ngModel)]="trip.VendorId" class="form-control" name="VendorId" placeholder="Enter VendorId" required>
+                    </div>
+
+                    <div class="col-md-6">             
+                        
+                          <select placeholder="Destinations Id"[(ngModel)]="trip.Destinations.DestinationsId"  name="DestinationsId" #TitleControl="ngModel">
+                            <option *ngFor="let Destinations of DestinationsList" [value]="Destinations.DestinationsId" >
+                              {{Destinations.Title}}</option>
+         
+                          </select>
+                       
+                    </div>
+
+            <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="TripTypeId">TripTypeId:</label>
+                                <input type="text"[(ngModel)]="trip.TripTypeId" class="form-control" name="TripTypeId" placeholder="Enter TripTypeId" required>
+                            </div>
+            
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Source">Source:</label>
+                    <input type="text"[(ngModel)]="trip.Source" class="form-control" name="Source" placeholder="Enter Source" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+            <div class="form-group">
+                <label for="Date">Date:</label>
+                <input type="text"[(ngModel)]="trip.Date" class="form-control" name="Date" placeholder="Enter Date" required>
+            </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Status">Status:</label>
+                    <input type="text"[(ngModel)]="trip.Status" class="form-control" name="Status" placeholder="Enter Status" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Budget">Budget:</label>
+                    <input type="text"[(ngModel)]="trip.Budget" class="form-control" name="Budget" placeholder="Enter Budget" required>
+                </div>
+            </div>
+            
+                      
+                  </div>
+           
+        </div>
+
+        <button  type="submit" (click)="OnSubmit()"class="btn btn-primary">Submit</button>
+ 
+</div>
+
+
+
+

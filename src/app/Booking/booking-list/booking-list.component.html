@@ -1,0 +1,54 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Booking List</h4>
+                        <p class="card-category"> View Here All Booking Table Record</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary" style="background-color: #ea48441c;">
+                                    <th>BookingId </th>
+                                    <th>UserId </th>
+                                    <th>VendorServiceId </th>
+                                    <th>BookingDate </th>
+                                    <th>Status </th>
+                                    <th>Action </th>
+                                    
+                                    
+                                        
+                                   
+                              
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let i of BookingList">
+                                        <td>{{i.BookingId}}</td>
+                                        <td>{{i.UserId}}</td>
+                                        <td>{{i.VendorServiceId}}</td>
+                                        <td>{{i.BookingDate}}</td>
+                                        <td>{{i.Status}}</td>
+                                        <td>{{i.Action}}</td>
+                                        
+                                        
+                                        <!-- <td>{{i.Sectiontwo}}</td> -->
+                                        <!-- <td> <img src="{{i.Photo}}" style="height: 80px;width: 80px;"></td>  -->
+                                      <td><i class="fa fa-pencil-square iconaction"(click)="Edit(i.BookingId)"  aria-hidden="true"></i>
+                                             <i class="fa fa-eye iconaction" (click)="View(i.BookingId)" aria-hidden="true"></i>
+                                              <i class="fa fa-trash iconaction"(click)="Delete(i.BookingId)" aria-hidden="true"></i>
+                                        </td> 
+                                    </tr>    
+                                                           
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   
+        </div>
+    </div>
+  </div>
+

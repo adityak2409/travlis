@@ -1,0 +1,45 @@
+<div class="row marginlittle">
+    <div class="col-md-12 topform">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">EmergencyContact</h4>
+                <p class="card-category">Add New EmergencyContact Here</p>
+            </div>
+            <div class="card-body">
+                <form #blogForm="ngForm">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="Name">Name:</label>
+                      <input type="text"[(ngModel)]="emergencyContact.Name" class="form-control" name="Name" placeholder="Enter Name" required>
+                      
+                  </div>
+                  <div class="col-md-12">
+                   
+                    <label for="Relationship">Relationship:</label>
+                    <input type="text"[(ngModel)]="emergencyContact.Relationship" class="form-control" name="Relationship" placeholder="Enter Relationship" required>
+                    
+                  </div>
+
+                  <div class="col-md-12">
+                   
+                    <label for="Contact">Status:</label>
+                    <input type="text"[(ngModel)]="emergencyContact.Contact" class="form-control" name="Contact" placeholder="Enter Contact" required>
+                    
+                  </div>
+                  
+            
+               
+                
+                  </div>
+                  
+                  
+                
+                    <button mat-raised-button type="submit" [disabled]="blogForm.invalid"class="btn btn-danger pull-right"(click)="OnSubmit()">update</button>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+

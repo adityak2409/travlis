@@ -1,0 +1,61 @@
+<div class="row marginlittle">
+    <div class="col-md-12 topform">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Blog</h4>
+                <p class="card-category">Add New Blog Here</p>
+            </div>
+            <div class="card-body">
+                <form #blogForm="ngForm">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="Title">Title:</label>
+                      <input type="text"[(ngModel)]="activities.Title" class="form-control" name="Title" placeholder="Enter Title" required>
+                      
+                  </div>
+                  <div class="col-md-12">                   
+                    <label for="SubTitle">SubTitle:</label>
+                    <input type="text"[(ngModel)]="activities.SubTitle" class="form-control" name="SubTitle" placeholder="Enter SubTitle" required>                   
+                  </div>
+                  <div class="col-md-12">
+                    
+                    <label for="Description">Description:</label>
+                    <input type="text"[(ngModel)]="activities.Description" class="form-control" name="Description" placeholder="Enter Description" required>
+                   
+                </div>
+                <div class="col-md-4">
+                  
+                    <label for="Amount">Amount:</label>
+                    <input type="text"[(ngModel)]="activities.Amount" class="form-control" name="Amount" placeholder="Enter Amount" required>
+                  
+              </div>
+              <div class="col-md-4">
+                
+                   <label for="Status">Status:</label>
+                  <input type="text"[(ngModel)]="activities.Status" class="form-control" name="Status" placeholder="Enter Status" required>
+                
+            </div>
+            <div class="col-md-6">
+       
+              <label for="avatar">Upload Image: </label>
+              <input type="file" id="avatar"  name="Photo"  [(ngModel)]="activities.Photo"  (change)="fileChangeEvent($event)" #PhotoControl="ngModel"accept="image/png, image/jpeg" required>
+             
+             </div>
+            
+            
+               
+                
+                  </div>
+                  
+                  
+                
+                    <button mat-raised-button type="submit" [disabled]="blogForm.invalid"class="btn btn-danger pull-right"(click)="OnSubmit()">update</button>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+

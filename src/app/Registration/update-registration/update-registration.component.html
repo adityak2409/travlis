@@ -1,0 +1,73 @@
+<div class="row marginlittle">
+    <div class="col-md-12 topform">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Registration</h4>
+                <p class="card-category">Add New Registration Here</p>
+            </div>
+            <div class="card-body">
+                <form #blogForm="ngForm">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="FName">FName:</label>
+                      <input type="text"[(ngModel)]="registration.FName" class="form-control" name="FName" placeholder="Enter FName" required>
+                      
+                  </div>
+                  <div class="col-md-12">
+                   
+                    <label for="LName">LName:</label>
+                    <input type="text"[(ngModel)]="registration.LName" class="form-control" name="LName" placeholder="Enter LName" required>
+                    
+                  </div>
+                  
+                  <div class="col-md-12">
+                   
+                    <label for="Email">Email:</label>
+                    <input type="text"[(ngModel)]="registration.Email" class="form-control" name="Email" placeholder="Enter Email" required>
+                    
+                  </div>
+
+                  <div class="col-md-12">
+                   
+                    <label for="Password">Password:</label>
+                    <input type="text"[(ngModel)]="registration.Password" class="form-control" name="Password" placeholder="Enter Password" required>
+                    
+                  </div>
+
+                  <div class="col-md-12">
+                   
+                    <label for="EmailStatus">EmailStatus:</label>
+                    <input type="text"[(ngModel)]="registration.EmailStatus" class="form-control" name="EmailStatus" placeholder="Enter EmailStatus" required>
+                    
+                  </div>
+
+                  <div class="col-md-12">
+                   
+                    <label for="OtpNo">OtpNo:</label>
+                    <input type="text"[(ngModel)]="registration.OtpNo" class="form-control" name="OtpNo" placeholder="Enter OtpNo" required>
+                    
+                  </div>
+
+                  <div class="col-md-12">
+                   
+                    <label for="Status">Status:</label>
+                    <input type="text"[(ngModel)]="registration.Status" class="form-control" name="Status" placeholder="Enter Status" required>
+                    
+                  </div>
+            
+               
+                
+                  </div>
+                  
+                  
+                
+                    <button mat-raised-button type="submit" [disabled]="blogForm.invalid"class="btn btn-danger pull-right"(click)="OnSubmit()">update</button>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+

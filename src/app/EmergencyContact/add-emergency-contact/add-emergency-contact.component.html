@@ -1,0 +1,38 @@
+<div class="container">
+    <h2 class="text-center">EmergencyContact Form</h2>
+    <form>
+        <div class="row">
+            
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Name">Name:</label>
+                    <input type="text"[(ngModel)]="emergencyContact.Name" class="form-control" name="Name" placeholder="Enter Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="Relationship">Relationship:</label>
+                    <input type="text"[(ngModel)]="emergencyContact.Relationship" class="form-control" name="Relationship" placeholder="Enter Relationship" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="Contact">Contact:</label>
+                    <input type="text"[(ngModel)]="emergencyContact.Contact" class="form-control" name="Contact" placeholder="Enter Contact" required>
+                </div>
+            </div>
+          
+           
+        </div>
+
+        
+     
+       
+        
+
+        
+
+        <button  type="submit" (click)="OnSubmit()"class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+

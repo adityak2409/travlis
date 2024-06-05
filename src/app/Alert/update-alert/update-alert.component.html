@@ -1,0 +1,33 @@
+<p>update-alert works!</p>
+<div class="row marginlittle">
+    <div class="col-md-12 topform">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Alert</h4>
+                <p class="card-category">Add New Alert Here</p>
+            </div>
+            <div class="card-body">
+                <form #alertForm="ngForm">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="AlertMessage">AlertMessage:</label>
+                      <input type="text"[(ngModel)]="alert.AlertMessage" class="form-control" name="AlertMessage" placeholder="Enter AlertMessage" required>
+                      
+                  </div>
+                  
+            
+               
+                
+                  </div>
+                  
+                  
+                
+                    <button mat-raised-button type="submit" [disabled]="alertForm.invalid"class="btn btn-danger pull-right"(click)="OnSubmit()">update</button>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+

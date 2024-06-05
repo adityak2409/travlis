@@ -1,0 +1,40 @@
+
+<div class="container">
+    <h2 class="text-center">Alert Form</h2>
+    <form>
+        <div class="row">
+            
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="UserId">UserId:</label>
+                    <input type="text"[(ngModel)]="alert.UserId" class="form-control" name="UserId" placeholder="Enter UserId" required>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="DestinationId">DestinationId:</label>
+                        <input type="text"[(ngModel)]="alert.DestinationId" class="form-control" name="DestinationId" placeholder="Enter DestinationId" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="AlertMessage">AlertMessage:</label>
+                            <input type="text"[(ngModel)]="alert.AlertMessage" class="form-control" name="AlertMessage" placeholder="Enter AlertMessage" required>
+                        </div>
+            </div>
+          
+           
+        </div>
+
+        
+     
+       
+        
+
+        
+
+        <button  type="submit" (click)="OnSubmit()"class="btn btn-primary">Submit</button>
+
+</div>
+
+

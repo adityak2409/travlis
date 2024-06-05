@@ -1,0 +1,51 @@
+<div class="row marginlittle">
+    <div class="col-md-12 topform">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Feedback</h4>
+                <p class="card-category">Add New Feedback Here</p>
+            </div>
+            <div class="card-body">
+                <form #blogForm="ngForm">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="UserId">UserId:</label>
+                      <input type="text"[(ngModel)]="feedback.UserId" class="form-control" name="UserId" placeholder="Enter UserId" required>
+                      
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="VendorId">VendorId:</label>
+                      <input type="text"[(ngModel)]="feedback.VendorId" class="form-control" name="VendorId" placeholder="Enter VendorId" required>
+                      
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="FeedbackText">FeedbackText:</label>
+                      <input type="text"[(ngModel)]="feedback.FeedbackText" class="form-control" name="FeedbackText" placeholder="Enter FeedbackText" required>
+                      
+                  </div>
+                  <div class="col-md-12">
+                   
+                    <label for="Rating">Rating:</label>
+                    <input type="text"[(ngModel)]="feedback.Rating" class="form-control" name="Rating" placeholder="Enter Rating" required>
+                    
+                  </div>
+                  
+            
+               
+                
+                  </div>
+                  
+                  
+                
+                    <button mat-raised-button type="submit" [disabled]="blogForm.invalid"class="btn btn-danger pull-right"(click)="OnSubmit()">update</button>
+                    <div class="clearfix"></div>
+          
+            </div>
+        </div>
+   
+  
+  

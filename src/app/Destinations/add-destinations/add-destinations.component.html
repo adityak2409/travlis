@@ -1,0 +1,80 @@
+<div class="container">
+    <h2 class="text-center">Destinations Form </h2>
+    <form>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="CountryId">CountryId:</label>
+                    <input type="text"[(ngModel)]="destinations.CountryId" class="form-control" name="CountryId" placeholder="Enter CountryId" required>
+                </div>
+            </div><div class="col-md-6">
+                <div class="form-group">
+                    <label for="StateId">StateId:</label>
+                    <input type="text"[(ngModel)]="destinations.StateId" class="form-control" name="StateId" placeholder="Enter StateId" required>
+                </div>
+            </div><div class="col-md-6">
+                <div class="form-group">
+                    <label for="CityId">CityId:</label>
+                    <input type="text"[(ngModel)]="destinations.CityId" class="form-control" name="CityId" placeholder="Enter CityId" required>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Title">Title:</label>
+                    <input type="text"[(ngModel)]="destinations.Title" class="form-control" name="Title" placeholder="Enter Title" required>
+                </div>
+            </div>
+          
+            
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Subtitle">Subtitle:</label>
+                    <input type="text" [(ngModel)]="destinations.SubTitle" class="form-control" name="Subtitle" placeholder="Enter Subtitle" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Description">Description:</label>
+                    <input type="text"[(ngModel)]="destinations.Description" class="form-control" name="Description" placeholder="Enter Description" required>
+                </div>
+            </div>
+           
+        </div>
+        <div class="form-group">
+          <label for="Status">Status:</label>
+          <input type="text"[(ngModel)]="destinations.Status" class="form-control" name="Status" placeholder="Enter Status" required>
+      </div>
+      <div class="col-md-6">
+       
+      <label for="avatar">Upload Image: </label>
+      <input type="file" id="avatar"  name="Photo"  [(ngModel)]="destinations.Photo"  (change)="fileChangeEvent($event)" #PhotoControl="ngModel"accept="image/png, image/jpeg" required>
+     
+     </div>
+     
+       
+        
+
+        
+
+        <button  type="submit" (click)="OnSubmit()"class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+

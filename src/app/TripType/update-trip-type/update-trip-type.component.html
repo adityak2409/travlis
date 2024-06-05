@@ -1,0 +1,49 @@
+<div class="row marginlittle">
+    <div class="col-md-12 topform">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">TripType</h4>
+                <p class="card-category">Add New TripType Here</p>
+            </div>
+            <div class="card-body">
+                <form #blogForm="ngForm">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="TripTypeId">TripTypeId:</label>
+                      <input type="text"[(ngModel)]="tripType.TripTypeId" class="form-control" name="TripTypeId" placeholder="Enter TripTypeId" required>
+                      
+                  </div>
+                    <div class="col-md-12">
+                      <label for="Title">Title:</label>
+                      <input type="text"[(ngModel)]="tripType.Title" class="form-control" name="Title" placeholder="Enter Title" required>
+                      
+                  </div>
+                  <div class="col-md-12">
+                   
+                    <label for="SubTitle">SubTitle:</label>
+                    <input type="text"[(ngModel)]="tripType.SubTitle" class="form-control" name="SubTitle" placeholder="Enter SubTitle" required>
+                    
+                  </div>
+
+                  <div class="col-md-12">
+                   
+                    <label for="Icon">Icon:</label>
+                    <input type="text"[(ngModel)]="tripType.Icon" class="form-control" name="Icon" placeholder="Enter Icon" required>
+                    
+                  </div>
+                  
+                  
+            
+               
+                
+                  </div>
+                  
+                  
+                
+                    <button mat-raised-button type="submit" [disabled]="blogForm.invalid"class="btn btn-danger pull-right"(click)="OnSubmit()">update</button>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>

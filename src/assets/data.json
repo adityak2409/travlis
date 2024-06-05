@@ -1,0 +1,27 @@
+{
+    "countries": [
+      {
+        "name": "India",
+        "states": [
+          {
+            "name": "Maharashtra",
+            "cities": ["Pune", "Akola", "Mumbai", "Nanded", "Satara"]
+          },
+          {
+            "name": "Goa",
+            "cities": ["Panaji,", "Margao", "Vasco", "Mapusa", "Ponda"]
+          }
+        ]
+      },
+      {
+        "name": "USA",
+        "states": [
+          {
+            "name": " California",
+            "cities": ["Los Angele", "San Diego", "San Jose"]
+          }
+        ]
+      }
+    ]
+  }
+  

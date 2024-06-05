@@ -1,0 +1,36 @@
+<div class="row marginlittle">
+    <div class="col-md-12 topform">
+      <div class="card">
+        <div class="card-header card-header-danger">
+          <h4 class="card-title">Student</h4>
+          <p class="card-category">Add new Student here</p>
+        </div>
+        <div class="card-body">
+          <form #studentForm="ngForm">
+            <div class="row">
+              <div class="col-md-3">
+                <input type="text" placeholder="Name" [(ngModel)]="student.Name" name="Name" #TitleControl="ngModel" required>
+              </div>
+  
+              <div class="col-md-6">
+                <label for="photo">Photo: </label>
+                <input type="file" id="photo" name="Photo" [(ngModel)]="student.Photo" (change)="fileChangeEvent($event)" #PhotoControl="ngModel" accept="image/png, image/jpeg" required>
+              </div>
+  
+              <div class="col-md-6">
+                <label for="pdf">PDF: </label>
+                <input type="file" id="pdf" name="Pdf" [(ngModel)]="student.Pdf" (change)="fileChangeEventt($event)" #PdfControl="ngModel" accept=".pdf" required>
+              </div>
+  
+              <div class="clearfix"></div>
+  
+              <div class="col-md-12">
+                <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="OnSubmit()">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

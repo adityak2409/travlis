@@ -1,0 +1,61 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Destinations List</h4>
+                        <p class="card-category"> View Here All Destinations Table Record</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary" style="background-color: #ea48441c;">
+                                    <th>DestinationsId </th>
+                                    <th>CountryId </th>
+                                    <th>StateId </th>
+                                    <th>CityId </th>
+                                    <th>Title </th>
+                                    <th>SubTitle</th>
+                                    <th>Description</th>
+                                    <th>Status </th>
+                                    <th>Photo </th>
+                                    <th>Action </th>
+                                    
+                                        
+                                   
+                              
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let i of DestinationsList">
+                                        <td>{{i.DestinationsId}}</td>
+                                        <td>{{i.CountryId}}</td>
+                                        <td>{{i.StateId}}</td>
+                                        <td>{{i.CityId}}</td>
+                                        <td>{{i.Title}}</td>
+                                        <td>{{i.SubTitle}}</td>
+                                        <td>{{i.Description}}</td>
+                                        <td>{{i.Status}}</td>
+                                        <td>{{i.Photo}}</td>
+                                        
+
+                                        <!-- <td>{{i.Sectiontwo}}</td> -->
+                                        <td> <img src="{{imgPath}}Content/Destinations/{{i.Photo}}"  style="height: 80px;width: 80px;"></td> 
+                                      <td><i class="fa fa-pencil-square iconaction"(click)="Edit(i.DestinationsId)"  aria-hidden="true"></i>
+                                             <i class="fa fa-eye iconaction" (click)="View(i.DestinationsId)" aria-hidden="true"></i>
+                                              <i class="fa fa-trash iconaction"(click)="Delete(i.DestinationsId)" aria-hidden="true"></i>
+                                        </td> 
+                                    </tr>    
+                                                           
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   
+        </div>
+    </div>
+  </div>
+
+

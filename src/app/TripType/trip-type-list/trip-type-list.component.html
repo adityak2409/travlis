@@ -1,0 +1,49 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">TripType List</h4>
+                        <p class="card-category"> View here all TripType table record</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary" style="background-color: #ea48441c;">
+                                    <th>TripTypeId </th>
+                                    <th>Title </th>
+                                    <th>SubTitle</th>
+                                    <th>Icon</th>
+                                    <th>Action</th>
+                                    
+                                        
+                                   
+                              
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let i of TripTypeList">
+                                        <td>{{i.TripTypeId}}</td>
+                                        <td>{{i.Title}}</td>
+                                        <td>{{i.SubTitle}}</td>
+                                        <td>{{i.Icon}}</td>
+                                        <td>{{i.Action}}</td>
+
+
+                                        <td><i class="fa fa-pencil-square iconaction"(click)="Edit(i.TripTypeId)"  aria-hidden="true"></i>
+                                            <i class="fa fa-eye iconaction" (click)="View(i.TripTypeId)" aria-hidden="true"></i>
+                                             <i class="fa fa-trash iconaction"(click)="Delete(i.TripTypeId)" aria-hidden="true"></i>
+                                       </td> 
+                                        
+                                    </tr>    
+                                                           
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   
+        </div>
+    </div>
+  </div>

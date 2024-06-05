@@ -1,0 +1,75 @@
+<div class="row marginlittle">
+    <div class="col-md-12 topform">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Blog</h4>
+                <p class="card-category">Add New Blog Here</p>
+            </div>
+            <div class="card-body">
+                <form #blogForm="ngForm">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="Contact">Contact:</label>
+                      <input type="text"[(ngModel)]="userDetails.Contact" class="form-control" name="Contact" placeholder="Enter Contact" required>
+                      
+                  </div>
+                  <div class="col-md-12">
+                   
+                    <label for="Tagline">Tagline:</label>
+                    <input type="text"[(ngModel)]="userDetails.Tagline" class="form-control" name="Tagline" placeholder="Enter Tagline" required>
+                    
+                  </div>
+                  <div class="col-md-12">
+                    
+                    <label for="BirthDate">BirthDate:</label>
+                    <input type="text"[(ngModel)]="userDetails.BirthDate" class="form-control" name="BirthDate" placeholder="Enter BirthDate" required>
+                   
+                </div>
+                
+              <div class="col-md-4">
+                
+                   <label for="Status">Status:</label>
+                  <input type="text"[(ngModel)]="userDetails.Status" class="form-control" name="Status" placeholder="Enter Status" required>
+                
+            </div>
+
+            <div class="col-md-4">
+                  
+                <label for="Gender">Gender:</label>
+                <input type="text"[(ngModel)]="userDetails.Gender" class="form-control" name="Gender" placeholder="Enter Gender" required>
+              
+          </div>
+
+          <div class="col-md-4">
+                  
+            <label for="Address">Address:</label>
+            <input type="text"[(ngModel)]="userDetails.Address" class="form-control" name="Address" placeholder="Enter Address" required>
+          
+      </div>
+
+
+
+            <div class="col-md-6">
+       
+              <label for="avatar">Upload Image: </label>
+              <input type="file" id="avatar"  name="Photo"  [(ngModel)]="userDetails.Photo"  (change)="fileChangeEvent($event)" #PhotoControl="ngModel"accept="image/png, image/jpeg" required>
+             
+             </div>
+            
+            
+               
+                
+                  </div>
+                  
+                  
+                
+                    <button mat-raised-button type="submit" [disabled]="blogForm.invalid"class="btn btn-danger pull-right"(click)="OnSubmit()">update</button>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+
